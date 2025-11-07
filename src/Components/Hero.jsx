@@ -1,14 +1,11 @@
-// src/components/Hero.jsx
+
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-
-
 
 const typingWords = ["Frontend Developer", "React Enthusiast", "MERN Learner"];
 
 export default function Hero() {
-  // Simple typing effect (no external lib)
+
   const [wordIndex, setWordIndex] = useState(0);
   const [display, setDisplay] = useState("");
   const [deleting, setDeleting] = useState(false);
@@ -22,11 +19,11 @@ export default function Hero() {
         deleting ? current.slice(0, prev.length - 1) : current.slice(0, prev.length + 1)
       );
 
-      // If finished typing
+      
       if (!deleting && display === current) {
         setTimeout(() => setDeleting(true), 900);
       }
-      // If finished deleting
+      
       if (deleting && display === "") {
         setDeleting(false);
         setWordIndex((idx) => idx + 1);
@@ -36,7 +33,7 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, [display, deleting, wordIndex]);
 
-  // framer motion variants
+  
   const container = {
     hidden: {},
     show: {
@@ -56,7 +53,7 @@ export default function Hero() {
       id="home"
       className="h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-100 to-white relative overflow-hidden"
     >
-      {/* Subtle decorative blobs */}
+      
       <div className="pointer-events-none absolute -left-16 -top-16 w-72 h-72 rounded-full bg-purple-300 opacity-20 blur-3xl transform rotate-12"></div>
       <div className="pointer-events-none absolute -right-24 -bottom-12 w-96 h-96 rounded-full bg-yellow-300 opacity-18 blur-3xl transform rotate-6"></div>
 
@@ -103,16 +100,16 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* small extra: profile card (optional) */}
+        
         <motion.div
           variants={fadeUp}
           className="mt-10 flex items-center justify-center gap-4"
           aria-hidden
         >
           <div className="w-20 h-20 rounded-full overflow-hidden ring-4 ring-white shadow-md">
-            {/* Replace with your image in /src/assets/profile.jpg */}
+            
             <img
-              src="public/profile-2.png"
+              src="/profile-2.png"
               alt="Syed Zain"
               className="w-50 h-40 object-cover"
             />
@@ -124,7 +121,6 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* down arrow - bouncing */}
         <motion.a
           href="#about"
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"

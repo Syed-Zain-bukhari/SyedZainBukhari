@@ -9,21 +9,21 @@ export default function Projects() {
       description: "A personal site built with React and Tailwind CSS.",
       github: "https://github.com/Syed-Zain-bukhari/SyedZainBukhari",
       demo: "#",
-      image: "/public/webpo.png",
+      image: "/webpo.png",
     },
     {
       title: "To-Do App",
       description: "A simple task manager built in React with local storage.",
       github: "https://github.com/Syed-Zain-bukhari/TodoApp-React",
       demo: "#",
-      image: "/public/todo-2.jpg",
+      image: "/todo-2.jpg",
     },
     {
       title: "Quiz App",
       description: "Made for Sharpen your mind in tech basics.",
       github: "https://github.com/Syed-Zain-bukhari/quiz-app",
       demo: "#",
-      image: "/public/quiz-2.jpg",
+      image: "/quiz-2.jpg",
     },
   ];
 

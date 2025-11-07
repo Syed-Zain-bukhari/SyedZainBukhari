@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 export default function About() {
-  // Animation variants
+  
   const fadeUp = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -28,19 +28,19 @@ export default function About() {
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
       >
-        {/* Left side: Image */}
+        
         <motion.div
           variants={fadeUp}
           className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white"
         >
           <img
-            src="/public/full imag.jpg"
+            src="/full imag.jpg"
             alt="Syed Zain"
             className="w-100 h-120 object-cover hover:scale-105 transition-transform duration-500"
           />
         </motion.div>
 
-        {/* Right side: Text */}
+       
         <motion.div
           variants={fadeUp}
           className="flex-1 text-center md:text-left"
